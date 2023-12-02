@@ -11,14 +11,14 @@ public class Day1
         var totalSum = 0;
         foreach (var line in ReadInput())
         {
-            totalSum += GetSumForLine(line, totalSum);
+            totalSum += GetSumForLine(line);
         }
         
         Console.WriteLine(totalSum);
         
     }
 
-    private static int GetSumForLine(string line, int totalSum)
+    private static int GetSumForLine(string line)
     {
         int firstNumber = -1;
         int lastNumber = -1;
@@ -52,7 +52,7 @@ public class Day1
             lineForSolve = lineForSolve.Replace("seven", "s7n");
             lineForSolve = lineForSolve.Replace("eight", "e8t");
             lineForSolve = lineForSolve.Replace("nine", "n9e");
-            totalSum += GetSumForLine(lineForSolve, totalSum);
+            totalSum += GetSumForLine(lineForSolve);
         }
         Console.WriteLine(totalSum);
         
